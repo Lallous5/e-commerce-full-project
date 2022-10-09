@@ -11,6 +11,8 @@ class ForgotpassScreen extends StatelessWidget {
   final fromKey = GlobalKey<FormState>();
   final TextEditingController emailController = TextEditingController();
   final controller = Get.find<AuthController>();
+
+   ForgotpassScreen({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -38,10 +40,10 @@ class ForgotpassScreen extends StatelessWidget {
           key: fromKey,
           child: SingleChildScrollView(
             child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20),
+              padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Column(
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     height: 60,
                   ),
                   Text(
@@ -55,7 +57,7 @@ class ForgotpassScreen extends StatelessWidget {
                     "assets/images/forgetpass copy.png",
                     width: 300,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 40,
                   ),
                   AuthTextFromField(
@@ -70,15 +72,15 @@ class ForgotpassScreen extends StatelessWidget {
                     },
                     prefixIcon: Get.isDarkMode
                         ? Image.asset("assets/images/email.png")
-                        : Icon(
+                        : const Icon(
                             Icons.email,
                             color: pinkClr,
                             size: 30,
                           ),
-                    suffixIcon: Text(""),
+                    suffixIcon: const Text(""),
                     hintText: "Email",
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 40,
                   ),
                   GetBuilder<AuthController>(builder: (controller) {

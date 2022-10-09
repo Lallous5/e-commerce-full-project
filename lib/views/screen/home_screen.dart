@@ -32,7 +32,7 @@ class HomeScreen extends StatelessWidget {
                   padding: const EdgeInsets.only(left: 20, right: 20),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
+                    children: const [
                       TextUtils(
                           text: "Find Your",
                           fontSize: 25,

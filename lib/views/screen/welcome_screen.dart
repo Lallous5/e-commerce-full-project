@@ -1,6 +1,5 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:ecommerce_using_getx/main.dart';
 import 'package:ecommerce_using_getx/routes/routes.dart';
 import 'package:ecommerce_using_getx/utils/theme.dart';
 import 'package:ecommerce_using_getx/views/widget/text_utils.dart';
@@ -58,7 +57,7 @@ class WelcomeScreen extends StatelessWidget {
                     ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
+                      children: const [
                         TextUtils(
                           text: "LALLOUS",
                           fontSize: 35,

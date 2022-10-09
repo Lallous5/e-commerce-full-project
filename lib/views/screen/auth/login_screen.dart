@@ -7,7 +7,6 @@ import '../../../logic/controllers/auth_controller.dart';
 import '../../../routes/routes.dart';
 import '../../../utils/my_string.dart';
 import '../../../utils/theme.dart';
-import '../../widget/Check_widget.dart';
 import '../../widget/auth/auth_button.dart';
 import '../../widget/auth/auth_text_from_field.dart';
 import '../../widget/auth/container_under.dart';
@@ -20,6 +19,8 @@ class LoginScreen extends StatelessWidget {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passController = TextEditingController();
 
+   LoginScreen({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -28,7 +29,7 @@ class LoginScreen extends StatelessWidget {
         body: SingleChildScrollView(
           child: Column(
             children: [
-              Container(
+              SizedBox(
                 width: double.infinity,
                 height: MediaQuery.of(context).size.height / 1.3,
                 child: Padding(

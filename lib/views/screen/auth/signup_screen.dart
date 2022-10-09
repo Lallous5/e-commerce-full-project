@@ -8,7 +8,6 @@ import 'package:ecommerce_using_getx/views/widget/Check_widget.dart';
 import 'package:ecommerce_using_getx/views/widget/auth/auth_button.dart';
 import 'package:ecommerce_using_getx/views/widget/auth/auth_text_from_field.dart';
 import 'package:ecommerce_using_getx/views/widget/text_utils.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -22,6 +21,8 @@ class SignupScreen extends StatelessWidget {
   final TextEditingController nameController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passController = TextEditingController();
+
+   SignupScreen({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -30,7 +31,7 @@ class SignupScreen extends StatelessWidget {
         body: SingleChildScrollView(
           child: Column(
             children: [
-              Container(
+              SizedBox(
                 width: double.infinity,
                 height: MediaQuery.of(context).size.height / 1.3,
                 child: Padding(

@@ -1,10 +1,10 @@
+// ignore_for_file: file_names
+
 import 'package:ecommerce_using_getx/logic/controllers/auth_controller.dart';
 import 'package:ecommerce_using_getx/utils/theme.dart';
 import 'package:ecommerce_using_getx/views/widget/text_utils.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
+
 import 'package:get/get.dart';
 
 class CheckWidget extends StatelessWidget {
@@ -31,7 +31,7 @@ class CheckWidget extends StatelessWidget {
               ),
               child: controller.isCheckbox
                   ? Get.isDarkMode
-                      ? Icon(
+                      ? const Icon(
                           Icons.done,
                           color: pinkClr,
                           size: 30,
@@ -40,7 +40,7 @@ class CheckWidget extends StatelessWidget {
                   : Container(),
             ),
           ),
-          SizedBox(width: 10),
+          const SizedBox(width: 10),
           Row(
             children: [
               TextUtils(
@@ -50,7 +50,7 @@ class CheckWidget extends StatelessWidget {
                 color: Get.isDarkMode ? Colors.white : Colors.black,
                 underline: TextDecoration.none,
               ),
-              SizedBox(width: 10),
+              const SizedBox(width: 10),
               TextUtils(
                   text: "term & conditions",
                   fontSize: 18,

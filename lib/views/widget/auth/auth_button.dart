@@ -7,7 +7,7 @@ class AuthButton extends StatelessWidget {
   final String text;
   final Function() onPressed;
 
-  AuthButton({
+  const AuthButton({
     required this.text,
     required this.onPressed,
     Key? key,
@@ -16,17 +16,17 @@ class AuthButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
+      onPressed: onPressed,
+      style: ElevatedButton.styleFrom(
+        primary: Get.isDarkMode ? pinkClr : mainColor,
+        minimumSize: const Size(360, 50),
+      ),
       child: TextUtils(
           text: text,
           fontSize: 20,
           fontweight: FontWeight.bold,
           color: Colors.white,
           underline: TextDecoration.none),
-      onPressed: onPressed,
-      style: ElevatedButton.styleFrom(
-        primary: Get.isDarkMode ? pinkClr : mainColor,
-        minimumSize: Size(360, 50),
-      ),
     );
   }
 }

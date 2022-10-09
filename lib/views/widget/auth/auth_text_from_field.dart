@@ -9,7 +9,7 @@ class AuthTextFromField extends StatelessWidget {
   final Widget prefixIcon;
   final Widget suffixIcon;
   final String hintText;
-  AuthTextFromField({
+  const AuthTextFromField({
     required this.controller,
     required this.obscureText,
     required this.validator,

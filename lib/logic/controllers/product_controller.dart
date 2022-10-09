@@ -12,7 +12,6 @@ class ProductController extends GetxController {
   var storage = GetStorage();
   @override
   void onInit() {
-    // TODO: implement onInit
     super.onInit();
     List? storageShopping = storage.read<List>("isFavList");
     if (storageShopping != null) {

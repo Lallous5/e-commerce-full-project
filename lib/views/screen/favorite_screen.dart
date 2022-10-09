@@ -23,7 +23,7 @@ class FavoriteScreen extends StatelessWidget {
                   width: 200,
                   child: Image.asset("assets/images/heart.png"),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 TextUtils(
                     text: "Please, Add Your Favorites Products",
                     fontSize: 22,
@@ -65,7 +65,7 @@ class FavoriteScreen extends StatelessWidget {
       padding: const EdgeInsets.all(10),
       child: SizedBox(
         width: double.infinity,
-        height: 100,
+        height: 120,
         child: Row(
           children: [
             SizedBox(

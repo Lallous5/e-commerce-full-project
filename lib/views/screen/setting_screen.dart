@@ -27,7 +27,7 @@ class SettingScreen extends StatelessWidget {
                     fontSize: 22),
               ),
             ),
-            SizedBox(height: 30),
+            const SizedBox(height: 30),
             GetBuilder<AuthController>(builder: (controller) {
               return TextButton(
                 onPressed: () {
@@ -35,7 +35,12 @@ class SettingScreen extends StatelessWidget {
                       buttonColor: Get.isDarkMode ? pinkClr : mainColor,
                       title: "Logout from app",
                       middleText: "Are you sure you need to logout",
-                      radius: 30,
+                      middleTextStyle: const TextStyle(
+                          fontSize: 18,
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold),
+                      radius: 10,
+                      backgroundColor: Colors.grey,
                       textCancel: "NOO",
                       cancelTextColor: Colors.white,
                       confirmTextColor: Colors.white,

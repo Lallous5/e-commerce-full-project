@@ -3,6 +3,7 @@ import 'package:ecommerce_using_getx/logic/binding/main_binding.dart';
 import 'package:ecommerce_using_getx/logic/binding/product_binding.dart';
 import 'package:ecommerce_using_getx/views/screen/auth/forgetpass_screen.dart';
 import 'package:ecommerce_using_getx/views/screen/auth/login_screen.dart';
+import 'package:ecommerce_using_getx/views/screen/cart_screen.dart';
 import 'package:ecommerce_using_getx/views/screen/main_screen.dart';
 import 'package:ecommerce_using_getx/views/screen/welcome_screen.dart';
 import 'package:get/get.dart';
@@ -18,7 +19,7 @@ class AppRoutes {
   static final List<GetPage> routes = [
     GetPage(
       name: Routes.welcomeScreen,
-      page: () => WelcomeScreen(),
+      page: () => const WelcomeScreen(),
     ),
     GetPage(
         name: Routes.loginScreen,
@@ -41,6 +42,14 @@ class AppRoutes {
         ProductBinding(),
       ],
     ),
+    GetPage(
+      name: Routes.cartScreen,
+      page: () => CartScreen(),
+      bindings: [
+        AuthBinding(),
+        ProductBinding(),
+      ],
+    ),
   ];
 }
 
@@ -50,4 +59,5 @@ class Routes {
   static const signupScreen = '/signupScreen';
   static const forgotpassScreen = '/forgotpassScreen';
   static const mainScreen = '/mainScreen';
+  static const cartScreen = '/cartSreen';
 }
