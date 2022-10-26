@@ -35,22 +35,18 @@ class FavoriteScreen extends StatelessWidget {
           );
         } else {
           return ListView.separated(
-            itemCount: controller.favList.length,
-            separatorBuilder: (context, index) {
-              return buildFavItems(
-                image: controller.favList[index].image,
-                title: controller.favList[index].title,
-                price: controller.favList[index].price,
-                productId: controller.favList[index].id,
-              );
-            },
-            itemBuilder: (context, index) {
-              return const Divider(
-                color: Colors.grey,
-                thickness: 1,
-              );
-            },
-          );
+              itemBuilder: (context, index) {
+                return buildFavItems(
+                  image: controller.favList[index].image,
+                  title: controller.favList[index].title,
+                  price: controller.favList[index].price,
+                  productId: controller.favList[index].id,
+                );
+              },
+              separatorBuilder: (context, index) => const SizedBox(
+                    height: 20,
+                  ),
+              itemCount: controller.favList.length);
         }
       }),
     );
