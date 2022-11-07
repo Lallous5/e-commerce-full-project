@@ -7,7 +7,7 @@ import 'package:get/get.dart';
 import '../../../utils/theme.dart';
 
 class ClothesInfo extends StatefulWidget {
-  ClothesInfo({
+  const ClothesInfo({
     required this.title,
     required this.productId,
     required this.rate,
@@ -81,7 +81,7 @@ class _ClothesInfoState extends State<ClothesInfo> {
               ),
               RatingBarIndicator(
                 rating: widget.rate,
-                itemBuilder: (context, index) => Icon(
+                itemBuilder: (context, index) => const Icon(
                   Icons.star,
                   color: Colors.amber,
                 ),
@@ -91,10 +91,10 @@ class _ClothesInfoState extends State<ClothesInfo> {
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
-          Text(
+          const Text(
             "Details: ",
             style: TextStyle(fontSize: 24),
           ),
@@ -103,7 +103,7 @@ class _ClothesInfoState extends State<ClothesInfo> {
             child: Text(
               widget.description,
               textAlign: TextAlign.justify,
-              style: TextStyle(fontSize: 18),
+              style: const TextStyle(fontSize: 18),
               maxLines: isShowMore ? 3 : null,
               overflow: TextOverflow.fade,
             ),

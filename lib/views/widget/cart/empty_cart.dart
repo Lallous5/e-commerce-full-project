@@ -12,19 +12,19 @@ class EmptyCart extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Icon(
-            Icons.shopping_cart,
-            size: 150,
-            color: Get.isDarkMode ? Colors.white : Colors.black,
+          Image.asset(
+            "assets/images/card.png",
+            height: 150,
+            color: Colors.black,
           ),
           const SizedBox(height: 40),
           RichText(
             text: TextSpan(
               children: [
-                TextSpan(
+                const TextSpan(
                   text: "Your Cart is ",
                   style: TextStyle(
-                    color: Get.isDarkMode ? Colors.white : Colors.black,
+                    color: Colors.black,
                     fontSize: 30,
                     fontWeight: FontWeight.bold,
                   ),
@@ -41,10 +41,10 @@ class EmptyCart extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 10),
-          Text(
+          const Text(
             "Add items to get Started",
             style: TextStyle(
-              color: Get.isDarkMode ? Colors.white : Colors.black,
+              color: Colors.black,
               fontSize: 15,
               fontWeight: FontWeight.bold,
             ),
@@ -61,7 +61,7 @@ class EmptyCart extends StatelessWidget {
               onPressed: () {
                 Get.offNamed(Routes.mainScreen);
               },
-              child:const Text(
+              child: const Text(
                 "Go to Home",
                 style: TextStyle(
                   fontSize: 18,

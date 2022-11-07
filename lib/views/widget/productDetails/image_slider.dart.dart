@@ -10,7 +10,7 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class ImageSlider extends StatefulWidget {
   final String imgUrl;
-  ImageSlider({required this.imgUrl, Key? key}) : super(key: key);
+  const ImageSlider({required this.imgUrl, Key? key}) : super(key: key);
 
   @override
   State<ImageSlider> createState() => _ImageSliderState();

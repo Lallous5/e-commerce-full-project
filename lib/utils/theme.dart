@@ -17,7 +17,7 @@ const Color languageSettings = Color(0xffCB256C);
 class ThemesApp {
   static final light = ThemeData(
     primaryColor: mainColor,
-    backgroundColor: Colors.white,
+    backgroundColor: mainColor,
     brightness: Brightness.light,
   );
 

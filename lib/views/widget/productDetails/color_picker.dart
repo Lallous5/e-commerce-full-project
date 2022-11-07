@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ColorPicker extends StatelessWidget {
-  ColorPicker({required this.color, required this.outerBorder, Key? key})
+  const ColorPicker({required this.color, required this.outerBorder, Key? key})
       : super(key: key);
   final bool outerBorder;
   final Color color;

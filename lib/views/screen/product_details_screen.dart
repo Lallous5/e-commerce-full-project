@@ -9,7 +9,7 @@ import '../widget/productDetails/size_list.dart';
 
 class ProductDetailsScreen extends StatelessWidget {
   final ProductModels productModels;
-  ProductDetailsScreen({required this.productModels, Key? key})
+  const ProductDetailsScreen({required this.productModels, Key? key})
       : super(key: key);
 
   @override

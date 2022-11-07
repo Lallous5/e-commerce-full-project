@@ -28,36 +28,46 @@ class CartScreen extends StatelessWidget {
             ),
           ],
         ),
-        body: Obx(
-          () {
-            if (controller.productsMap.isEmpty) {
-              return const EmptyCart();
-            } else {
-              return SingleChildScrollView(
-                child: Column(
-                  children: [
-                    SizedBox(
-                      height: 540,
-                      child: ListView.separated(
-                          itemBuilder: (context, index) {
-                            return CartProductCard(
-                              quantity:
-                                  controller.productsMap.values.toList()[index],
-                              index: index,
-                              pr: controller.productsMap.keys.toList()[index],
-                            );
-                          },
-                          separatorBuilder: (context, index) => const SizedBox(
-                                height: 20,
-                              ),
-                          itemCount: controller.productsMap.length),
-                    ),
-                    CartTotal()
-                  ],
-                ),
-              );
-            }
-          },
+        body: Container(
+          height: MediaQuery.of(context).size.height,
+          decoration: const BoxDecoration(
+              color: Color.fromRGBO(246, 246, 246, 1),
+              borderRadius: BorderRadius.only(
+                bottomLeft: Radius.circular(60),
+                bottomRight: Radius.circular(60),
+              )),
+          child: Obx(
+            () {
+              if (controller.productsMap.isEmpty) {
+                return const EmptyCart();
+              } else {
+                return SingleChildScrollView(
+                  child: Column(
+                    children: [
+                      SizedBox(
+                        height: MediaQuery.of(context).size.height / 1.3,
+                        child: ListView.separated(
+                            itemBuilder: (context, index) {
+                              return CartProductCard(
+                                quantity: controller.productsMap.values
+                                    .toList()[index],
+                                index: index,
+                                pr: controller.productsMap.keys.toList()[index],
+                              );
+                            },
+                            separatorBuilder: (context, index) =>
+                                const SizedBox(
+                                  height: 20,
+                                ),
+                            itemCount: controller.productsMap.length),
+                      ),
+                      CartTotal()
+                    ],
+                  ),
+                );
+              }
+            },
+          ),
         ),
       ),
     );
