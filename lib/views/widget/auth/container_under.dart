@@ -28,7 +28,8 @@ class ContainerUnder extends StatelessWidget {
           topRight: Radius.circular(20),
         ),
       ),
-      child: Row(
+      child:
+       Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           TextUtils(
@@ -47,6 +48,7 @@ class ContainerUnder extends StatelessWidget {
                   underline: TextDecoration.underline))
         ],
       ),
+  
     );
   }
 }

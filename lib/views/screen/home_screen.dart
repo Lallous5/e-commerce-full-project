@@ -118,21 +118,41 @@ class HomeScreen extends StatelessWidget {
                           child: ListView.builder(
                             shrinkWrap: true,
                             scrollDirection: Axis.horizontal,
-                            itemCount: 4,
+                            itemCount: controller.searchList.isEmpty
+                                ? 4
+                                : controller.searchList.length,
                             itemBuilder: (BuildContext context, int index) {
-                              return CardListItem(
-                                imgURL: controller.productList[index].image,
-                                price: controller.productList[index].price,
-                                rate: controller.productList[index].rating.rate,
-                                productId: controller.productList[index].id,
-                                pr: controller.productList[index],
-                                onTap: () {
-                                  Get.to(() => ProductDetailsScreen(
-                                        productModels:
-                                            controller.productList[index],
-                                      ));
-                                },
-                              );
+                              if (controller.searchList.isEmpty) {
+                                return CardListItem(
+                                  imgURL: controller.productList[index].image,
+                                  price: controller.productList[index].price,
+                                  rate:
+                                      controller.productList[index].rating.rate,
+                                  productId: controller.productList[index].id,
+                                  pr: controller.productList[index],
+                                  onTap: () {
+                                    Get.to(() => ProductDetailsScreen(
+                                          productModels:
+                                              controller.productList[index],
+                                        ));
+                                  },
+                                );
+                              } else {
+                                return CardListItem(
+                                  imgURL: controller.searchList[index].image,
+                                  price: controller.searchList[index].price,
+                                  rate:
+                                      controller.searchList[index].rating.rate,
+                                  productId: controller.searchList[index].id,
+                                  pr: controller.searchList[index],
+                                  onTap: () {
+                                    Get.to(() => ProductDetailsScreen(
+                                          productModels:
+                                              controller.searchList[index],
+                                        ));
+                                  },
+                                );
+                              }
                             },
                           ));
                     }
@@ -178,7 +198,7 @@ class HomeScreen extends StatelessWidget {
                             },
                           ));
                     }
-                  }),
+                  })
                 ],
               ),
             ),

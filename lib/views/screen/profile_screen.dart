@@ -24,7 +24,7 @@ class ProfileScreen extends StatelessWidget {
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                 Info(),
+                 const Info(),
                   ProfileMenuItem(
                     icon: Icon(
                       Icons.favorite,
